@@ -1,0 +1,55 @@
+{
+    "name": "ssz-egg",
+    "displayName": "ssz-egg",
+    "description": "eggjs-plugin",
+    "version": "0.0.1",
+    "publisher": "KenyeeCheung",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.EggDefinition"
+    ],
+    "main": "./src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.EggDefinition",
+                "title": "Egg Definition"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.EggDefinition",
+                "mac": "Cmd+1",
+                "key": "Cmd+1"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.EggDefinition",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "icon": "https://ws4.sinaimg.cn/large/006tNbRwgy1fvdtdxm8fpj30eu0d6mxg.jpg",
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "babel-eslint": "^9.0.0"
+    }
+}
