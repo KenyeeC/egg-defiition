@@ -24,6 +24,11 @@
         "keybindings": [
             {
                 "command": "extension.EggDefinition",
+                "mac": "Cmd+F1",
+                "key": "Cmd+F1"
+            },
+            {
+                "command": "extension.EggDefinition",
                 "mac": "Cmd+1",
                 "key": "Cmd+1"
             }
