@@ -39,10 +39,8 @@ async function main(editor) {
     let command = targets.map(uri => `grep -rn " ${text}(" ${uri}`);
     const stdout = execMuti(command);
     const resource = stdout.split(/\n|\r|\n\r/g).filter(i => i);
-    console.log("resource:::::::", resource);
     await handleResolve(resource, editor);
   } catch (e) {
-    console.log("e::::::::::::", e);
     let message = e.message;
     if (e.message.indexOf(ERR_PREFIX) === -1)
       message = `${ERR_PREFIX} Unknow error`;
