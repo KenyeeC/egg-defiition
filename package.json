@@ -37,7 +37,7 @@
             ]
         }
     },
-    "icon": "https://ws4.sinaimg.cn/large/006tNbRwgy1fvdtdxm8fpj30eu0d6mxg.jpg",
+    "icon": "images/feature-x.jpeg",
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"

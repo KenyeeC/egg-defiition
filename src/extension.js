@@ -5,7 +5,8 @@ const ERR_PREFIX = "[EggDefinition]";
 const TARGET_FILE = {
   "app/router": ["app/controller"],
   "app/controller": ["app/service"],
-  "app/service": ["app/dao", "app/service"]
+  "app/service": ["app/dao", "app/service"],
+  "app/schedule": ["app/dao", "app/service"]
 };
 
 async function activate(context) {
@@ -106,8 +107,8 @@ function getTargetUri(editor) {
   });
   if (targetUri.length === 0)
     throw new Error(
-      `${ERR_PREFIX} Can not do search in this file
-      (Tips:Egg Definition can only do search include ${Object.keys(
+      `${ERR_PREFIX} Not support for this file
+      (Tips:Egg Definition can temporarily do search include ${Object.keys(
         TARGET_FILE
       ).join(", ")})`
     );
