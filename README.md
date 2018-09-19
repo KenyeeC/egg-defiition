@@ -17,7 +17,7 @@
 - 快捷键: F1 + 输入 Egg Definition
 - 鼠标: 右键 + Egg Definition
 
-![image](./images/feature.gif)
+![image](https://s1.ax1x.com/2018/09/19/ieyEBd.gif)
 
 ## 已知问题
 
