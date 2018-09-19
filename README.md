@@ -1,4 +1,5 @@
 # Egg Definition
+> 确保 Visual Studio Code 版本在 1.27.1 以上
 
 ## 功能及原理
 
@@ -8,13 +9,13 @@
 
 > route 的定义只会在 controller 中寻找，同理，controller 在 service 中寻找， service 在 service 及 dao（如有）中寻找
 
-> 确保 Visual Studio Code 版本在 1.27.0 以上
 
 ## 使用方法
 
 焦点放在关键词或选中关键词，然后执行以下方法的其中一种
-- 快捷键: cmd + 1
-- 快捷键: F1 + 输入 Egg Definition
+- 快捷键1: cmd + 1
+- 快捷键2: cmd + F1
+- 快捷键3: F1 + 输入 Egg Definition
 - 鼠标: 右键 + Egg Definition
 
 ![image](https://s1.ax1x.com/2018/09/19/ieyEBd.gif)
