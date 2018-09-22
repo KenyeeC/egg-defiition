@@ -8,6 +8,10 @@ const TARGET_FILE = {
   "app/schedule": ["app/dao", "app/service"]
 };
 
+const CONFIG_File = {
+  "app/": ["config/"]
+};
+
 async function goDefinition(editor) {
   try {
     const definition = await core.executeDefinition(editor);
@@ -25,7 +29,16 @@ async function goDefinition(editor) {
     let command = targets.map(uri => `grep -rn " ${text}(" ${uri}`);
     const stdout = core.execMuti(command);
     const resource = stdout.split(/\n|\r|\n\r/g).filter(i => i);
-    await core.handleResolve(resource, editor);
+    const result = await core.handleResolve(resource, editor);
+    // If nothing match, search in config
+    if (result === 0) {
+      const targets = core.getTargetUri(editor, CONFIG_File);
+      let command = targets.map(uri => `grep -rn " ${text}:" ${uri}`);
+      const stdout = core.execMuti(command);
+      const resource = stdout.split(/\n|\r|\n\r/g).filter(i => i);
+      const result = await core.handleResolve(resource, editor);
+      if (result === 0) throw new Error(`${ERR_PREFIX} No definition match`);
+    }
   } catch (e) {
     core.errHandler(e, ERR_PREFIX);
   }

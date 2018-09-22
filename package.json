@@ -11,7 +11,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.EggDefinition"
+        "onLanguage:javascript"
     ],
     "main": "./src/extension",
     "contributes": {
@@ -19,10 +19,6 @@
             {
                 "command": "extension.EggDefinition",
                 "title": "Egg Definition"
-            },
-            {
-                "command": "extension.EggUsage",
-                "title": "Egg Usage"
             }
         ],
         "keybindings": [
@@ -30,11 +26,6 @@
                 "command": "extension.EggDefinition",
                 "mac": "Cmd+F1",
                 "key": "Cmd+F1"
-            },
-            {
-                "command": "extension.EggUsage",
-                "mac": "Cmd+F2",
-                "key": "Cmd+F2"
             },
             {
                 "command": "extension.EggDefinition",
@@ -46,10 +37,6 @@
             "editor/context": [
                 {
                     "command": "extension.EggDefinition",
-                    "group": "navigation"
-                },
-                {
-                    "command": "extension.EggUsage",
                     "group": "navigation"
                 }
             ]

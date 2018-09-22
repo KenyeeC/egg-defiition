@@ -23,13 +23,10 @@ module.exports = {
           };
         })
         .filter(item => item.uri.path !== currentUri.path);
-      if (resource.length === 0) throw new Error();
-      if (resource.length === 1) {
+      if (resource.length === 0) return 0;
+      if (resource.length === 1)
         await module.exports.jumpDefinition(resource[0]);
-      }
-      if (resource.length > 1) {
-        await module.exports.createQuickPick(resource);
-      }
+      if (resource.length > 1) await module.exports.createQuickPick(resource);
     } catch (e) {
       throw new Error(`${ERR_PREFIX} No definition match`);
     }
