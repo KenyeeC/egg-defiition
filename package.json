@@ -2,7 +2,7 @@
     "name": "ssz-egg",
     "displayName": "ssz-egg",
     "description": "eggjs-plugin",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "KenyeeCheung",
     "engines": {
         "vscode": "^1.27.0"
@@ -11,7 +11,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:javascript"
+        "*"
     ],
     "main": "./src/extension",
     "contributes": {
