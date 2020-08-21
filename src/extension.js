@@ -4,7 +4,7 @@ const goDfinition = require("./commands/definition");
 function activate(context) {
   const definition = vscode.commands.registerCommand(
     "extension.EggDefinition",
-    function() {
+    function () {
       vscode.workspace.textDocuments;
       let editor = vscode.window.activeTextEditor;
       if (!editor) {
